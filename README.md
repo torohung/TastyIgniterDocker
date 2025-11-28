@@ -3,7 +3,7 @@
 Run with docker compose for automatic database configuration
 
 ```sh
-git clone https://github.com/Verve-IT-Solutions/TastyIgniterDocker.git
+git clone https://github.com/torohung/TastyIgniterDocker.git
 cd TastyIgniterDocker
 ```
 change the needed settings in the docker-compose using `nano docker-compose.yml`
