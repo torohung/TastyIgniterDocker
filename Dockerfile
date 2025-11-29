@@ -1,4 +1,4 @@
-FROM php:8.3-apache
+FROM php:8.4-apache
 
 RUN set -ex; \
     apt-get update; \
@@ -49,7 +49,8 @@ RUN set -ex; \
 COPY .htaccess /usr/src/tastyigniter/
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
-    cd /usr/src/tastyigniter && composer install --no-interaction
+    cd /usr/src/tastyigniter && composer install --no-interaction && composer require symfony/mailgun-mailer symfony/http-client
+
 
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh

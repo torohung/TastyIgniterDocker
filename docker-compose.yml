@@ -20,6 +20,10 @@ services:
                                         # Replace with your database password
       - CACHE_DRIVER=redis
       - REDIS_HOST=redis
+      - MAILGUN_DOMAIN=default
+      - MAILGUN_SECRET=default
+      - MAILGUN_ENDPOINT=api.eu.mailgun.net
+
     restart: always
   db:
     image: mariadb:10.11
